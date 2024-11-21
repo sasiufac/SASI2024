@@ -239,7 +239,7 @@ function startBreakoutGame() {
       if (x > paddleX && x < paddleX + paddleWidth) {
         dy = -dy;
       } else {
-        alert("GAME OVER - " + encodedCode);
+        alert("GAME OVER");
         closeButton.click();
         return;
       }
