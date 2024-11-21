@@ -11,3 +11,13 @@
   z-index: -1;
   overflow: hidden;
 }
+
+.minicurso-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.minicurso-content.hidden {
+  max-height: 0;
+}

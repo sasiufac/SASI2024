@@ -1,4 +1,4 @@
-// Configurações iniciais
+// num mexer
 let max_particles = 300;
 let particles = [];
 let frequency = 100;
@@ -7,16 +7,16 @@ let max_time = frequency * max_particles;
 let time_to_recreate = false;
 let mouse = { x: 0, y: 0, active: false };
 
-// Criar canvas e inicializar contexto
+// Cria canvas e inicializar contexto
 let tela = document.createElement("canvas");
 tela.width = window.innerWidth;
 tela.height = window.innerHeight;
 // document.body.appendChild(tela);
-document.getElementById("animation-bg").appendChild(tela);
+document.getElementById("animation-bg").appendChild(tela); // é gambiarra também
 
 let canvas = tela.getContext("2d");
 
-// Verifique se o canvas foi criado
+// Verifica se o canvas foi criado
 if (!canvas) {
   console.error("Erro ao inicializar o canvas!");
 }
@@ -45,12 +45,12 @@ tela.addEventListener("click", function (event) {
   }
 });
 
-// Habilitar recriação
+// recriação
 setTimeout(() => {
   time_to_recreate = true;
 }, max_time);
 
-// Inicializar partículas
+// init
 popolate(max_particles);
 
 class Particle {
@@ -142,7 +142,7 @@ class Particle {
     this.canvas.closePath();
   }
 
-  // Adiciona o método getCoordinates
+  // Adiciona o método getCoordinates pra saber onde cada bolinha ta e fazr a conexão laa em baixo
   getCoordinates() {
     return {
       x: this.x,
