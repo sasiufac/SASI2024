@@ -2,7 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-#animation-bg {
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.font-pixelify {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.font-pixelify-bold {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 700;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+/* #animation-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +38,13 @@
   height: 100vh;
   z-index: -1;
   overflow: hidden;
+} */
+
+
+body {
+  padding-top: 122px;
 }
+
 
 .minicurso-content {
   overflow: hidden;
@@ -20,4 +54,29 @@
 
 .minicurso-content.hidden {
   max-height: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.section-visible {
+  opacity: 1;
+  animation: fadeInUp 0.8s ease-out forwards; /* so tem animaçãoquando aparece, o depois não existe */
 }

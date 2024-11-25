@@ -15,6 +15,9 @@ module.exports = {
         "violet-blue": "#4b49b1",
         "delft-blue-2": "#152f57",
       },
+      fontFamily: {
+        pixelify: ['"Pixelify Sans"', "sans-serif"],
+      },
     },
   },
   plugins: [],

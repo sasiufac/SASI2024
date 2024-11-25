@@ -7,7 +7,7 @@ let max_time = frequency * max_particles;
 let time_to_recreate = false;
 let mouse = { x: 0, y: 0, active: false };
 
-// Cria canvas e inicializar contexto
+// cria canvas e inicializar contexto
 let tela = document.createElement("canvas");
 tela.width = window.innerWidth;
 tela.height = window.innerHeight;
@@ -16,12 +16,12 @@ document.getElementById("animation-bg").appendChild(tela); // é gambiarra tamb�
 
 let canvas = tela.getContext("2d");
 
-// Verifica se o canvas foi criado
+// VVerifica se o canvas foi criado
 if (!canvas) {
   console.error("Erro ao inicializar o canvas!");
 }
 
-// Eventos do mouse
+// eventos do mouse
 tela.addEventListener("mousemove", function (event) {
   mouse.x = event.clientX;
   mouse.y = event.clientY;
@@ -189,7 +189,7 @@ function update() {
   connection();
   particles = particles.filter((p) => p.move());
 
-  // Recriação de partículas
+  // recriação de partículas
   if (time_to_recreate && particles.length < init_num) {
     popolate(1);
   }

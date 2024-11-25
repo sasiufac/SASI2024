@@ -8,45 +8,76 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=IBM+Plex+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css" />
+
   </head>
-  <body class=" font-sans">
-    <header class="bg-black h-32 text-white py-4 fixed top-0 w-full z-10">
-      <div class="container mx-auto px-4">
-        <h1 class="text-2xl text-white font-bold">SASI</h1>
+
+  <body class="font-sans text-lg md:text-base sm:text-sm">
+    <header class="bg-blue-900 h-24 text-white fixed top-0 w-full z-50 shadow-black">
+      <div class="container mx-auto px-4 flex items-center justify-between h-full">
+        <img src="/public/flat_sasi_white.svg" alt="SASI LOGO" class="h-16 md:h-20 lg:h-24">
+        <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+        <nav id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center h-full">
+          <ul class="flex flex-col lg:flex-row lg:space-x-6 font-pixelify-bold text-2xl lg:text-4xl">
+            <li><a href="#programacao" class="block py-2 lg:py-0 hover:text-gray-300">PROGRAMAÇÃO</a></li>
+            <li><a href="#minicursos" class="block py-2 lg:py-0 hover:text-gray-300">MINICURSOS</a></li>
+            <li><a href="#apoio" class="block py-2 lg:py-0 hover:text-gray-300">PATROCINIO/APOIO</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+  
 
-    <main class="container mx-auto px-4 py-8">
-      <div id="animation-bg"></div>
+    <main class="container mx-auto px-4 pt-64 relative z-20">
+      <div id="animation-bg" class="fixed inset-0 w-full h-full"></div>
 
-      <section class="flex justify-center my-8">
-        <img
-          src="/public/round_logo.png"
-          alt="chamada publica com data para a Primeira Semana Acadêmica de Sistemas de Informação - UFAC - 2024."
-          class="max-w-full h-auto"
-          loading="lazy"
-        />
-      </section>
+        <section class="flex justify-center my-8 section-hidden ">
+          <img
+            src="/public/round_logo.png"
+            alt="chamada publica com data para a Primeira Semana Acadêmica de Sistemas de Informação - UFAC - 2024."
+            class="max-w-full h-auto"
+            loading="lazy"
+          />
+        </section>
 
-      <section class="flex flex-row gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md mb-8 animate-slide-down">
-          <h2 class="text-3xl font-extrabold mb-6 text-blue-900 text-center">
+      <!-- <section class="flex flex-row gap-8 section-hidden">
+        <div class="bg-white p-6 rounded-lg  mb-8 animate-slide-down">
+          
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg  mb-8 animate-slide-down inline-block"
+        >
+        </div>
+      </section> -->
+
+
+      <section id="minicards" class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto section-hidden flex flex-col md:flex-row gap-8">
+        <div class="flex-1">
+          <h2 class="text-3xl font-pixelify-bold mb-6 text-blue-900 text-center">
             Semana Acadêmica de SI - UFAC
           </h2>
           <p class="text-delft-blue">
-            A 1ª Semana Acadêmica de Sistemas de Informação da
-            UFAC está chegando!
+            A 1ª Semana Acadêmica de Sistemas de Informação da UFAC está chegando!
           </p>
           <p class="text-delft-blue">
-            Prepare-se para uma semana repleta de conhecimento, inovação e
-            networking! Pela primeira vez, o curso de Sistemas de Informação da
-            UFAC traz uma programação especial com palestras, workshops e
-            minicursos que vão te conectar ao futuro da tecnologia!
+            Prepare-se para uma semana repleta de conhecimento, inovação e networking! Pela primeira vez, o curso de Sistemas de Informação da UFAC traz uma programação especial com palestras, workshops e minicursos que vão te conectar ao futuro da tecnologia!
           </p>
           <p class="text-delft-blue">
-            Fique ligado e não deixe de participar desse marco histórico para a
-            nossa comunidade acadêmica!
+            Fique ligado e não deixe de participar desse marco histórico para a nossa comunidade acadêmica!
           </p>
           <p class="text-delft-blue mt-4 font-bold">
             Data: 03 e 04 de dezembro (08:00)<br />
@@ -58,16 +89,13 @@
             <a
               href="https://www.even3.com.br/sasiufac/"
               target="_blank"
-              class="text-delft-blue font-bold uppercase hover:text-blue-800 hover:underline" 
+              class="text-delft-blue font-bold uppercase hover:text-blue-800 hover:underline font-pixelify" 
               rel="noopener noreferrer"
               >Clique aqui!</a
             >
-          </p>
         </div>
 
-        <div
-          class="bg-white p-6 rounded-lg shadow-md mb-8 animate-slide-down inline-block"
-        >
+        <!-- <div class="flex-1">         
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4733.079570421628!2d-67.86693192416232!3d-9.955971206505248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8ea238bdddf9%3A0x81261e9af7020765!2sAnfiteatro%20Garibaldi%20Brasil!5e1!3m2!1spt-BR!2sbr!4v1732134862058!5m2!1spt-BR!2sbr"
             width="600"
@@ -77,307 +105,449 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div> -->
+      </section>
+
+
+      <section id="minicards" class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto section-hidden flex flex-col gap-8">
+        <div class="flex-1">
+          <h2 class="text-3xl font-pixelify-bold mb-6 text-blue-900 text-center">Muito conhecimento</h2>
+          <p class="text-delft-blue">
+            Participe da nossa Semana Acadêmica e mergulhe em um universo de conhecimento e inovação! Este evento é uma oportunidade única para expandir seus horizontes, aprender com especialistas renomados e se conectar com outros estudantes e profissionais da área. Não perca a chance de enriquecer seu aprendizado, desenvolver novas habilidades e se preparar para os desafios do futuro. Venha fazer parte dessa experiência transformadora e impulsione sua carreira para o próximo nível!
+          </p>
+        </div>
+
+        <div class="flex-1">
+            <h2 class="text-2xl font-pixelify-bold mb-4 text-blue-900 text-center">Maratona de programação</h2>
+          <p class="text-delft-blue">
+            Venha participar da nossa emocionante maratona de programação! Este é o momento perfeito para testar suas habilidades, aprender novas técnicas e colaborar com outros entusiastas da tecnologia. Durante a maratona, você terá a oportunidade de resolver desafios complexos, criar soluções inovadoras e competir por prêmios incríveis. Não importa se você é um iniciante ou um programador experiente, todos são bem-vindos! Junte-se a nós para uma experiência inesquecível, cheia de aprendizado, diversão e networking. Prepare-se para superar seus limites e mostrar todo o seu potencial. Inscreva-se agora e faça parte dessa jornada incrível!
+          </p>
+        </div>
+
+        <div class="flex-1">
+          <h2 class="text-3xl font-pixelify-bold mb-6 text-blue-900 text-center">Networking</h2>
+          <p class="text-delft-blue">
+            Participar da nossa Semana Acadêmica é uma excelente oportunidade para expandir sua rede de contatos! Conecte-se com profissionais experientes, colegas de curso e especialistas da área de tecnologia. O networking é uma ferramenta poderosa para o crescimento profissional, permitindo que você troque experiências, descubra novas oportunidades e construa relacionamentos que podem abrir portas no futuro. Não perca a chance de interagir com pessoas que compartilham dos mesmos interesses e ambições, e que podem contribuir significativamente para o seu desenvolvimento pessoal e profissional. Venha fazer parte dessa comunidade e fortaleça sua rede de contatos!
+          </p>
         </div>
       </section>
 
-      <section
-        class="bg-white p-6 rounded-lg shadow-md mb-8 animate-slide-down w-1/3 mr-auto"
-      >
-        <h2 class="text-3xl font-extrabold mb-6 text-blue-900 text-center">Sobre o Evento</h2>
-        <p>Conteúdo da seção Sobre</p>
-      </section>
-
-      <section
-        class="bg-white p-6 rounded-lg shadow-md mb-8 animate-slide-down w-2/3 mr-auto"
-      >
-        <h2 class="text-3xl font-extrabold mb-6 text-blue-900 text-center">Programação</h2>
-
-        <div class="flex-col gap-4 mb-8 animate-slide-down">
+      <section class="bg-white p-8 rounded-lg shadow-lg mb-8 animate-slide-down w-11/12 mx-auto section-hidden" id="programacao">
+        <h2 class="text-3xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Programação</h2>
+      
+        <div class="space-y-8">
           <!-- dia 03/12/2024 -->
-          <section class="mb-6 gap-3">
-            <h3 class="text-lg font-bold text-blue-800 mb-2">
-              Terça-feira, 03 de dezembro de 2024
-            </h3>
-
+          <section class="space-y-6 section-hidden">
+            <h3 class="text-3xl font-semibold text-blue-800 mb-4">Terça-feira, 03 de dezembro de 2024</h3>
+      
             <!-- palestra 1 -->
-            <div class="mb-6 flex flex-col md:flex-row items-start gap-4">
+            <div class="flex flex-col md:flex-row items-start gap-6 bg-gray-100 p-6 rounded-lg ">
               <img
                 src="/public/pax/edilson.webp"
                 alt="Edilson Albertini da Silva"
-                class="rounded-full max-w-[40%] h-auto"
+                class="rounded-full max-w-[40%] h-auto shadow-lg"
                 loading="lazy"
               />
-              <div>
-                <h4 class="font-semibold text-delft-blue"></h4>
-                  08:10 - 09:40 | Palestra 1: O processo de dogfooding na
-                  Motorola
-                </h4>
+              <div class="flex-1">
+                <h4 class="font-semibold text-delft-blue text-xl mb-2">08:10 - 09:40 | Palestra 1: O processo de dogfooding na Motorola</h4>
                 <p class="text-gray-700">
-                  <strong>Palestrante:</strong> Edilson Albertini da Silva
-                  Formado em Engenharia de Computação e Antropologia pela
-                  Universidade Estadual de Campinas, Edilson possui mais de 25
-                  anos de experiência em pesquisa e desenvolvimento de software
-                  em empresas como IBM, Nortel Networks e Motorola. Atualmente,
-                  ele atua como Gerente Sênior no desenvolvimento de sistemas e
-                  aplicativos de Dogfooding.
+                  <strong>Palestrante:</strong> Edilson Albertini da Silva - Formado em Engenharia de Computação e Antropologia pela Universidade Estadual de Campinas, Edilson possui mais de 25 anos de experiência em pesquisa e desenvolvimento de software em empresas como IBM, Nortel Networks e Motorola. Atualmente, ele atua como Gerente Sênior no desenvolvimento de sistemas e aplicativos de Dogfooding.
                 </p>
               </div>
             </div>
-
+      
             <!-- exposição WebAcademy -->
-            <div class="mb-6 flex flex-col md:flex-row items-start gap-4">
+            <div class="flex flex-col md:flex-row items-start gap-6 bg-gray-100 p-6 rounded-lg ">
               <img
                 src="/public/pax/daricelio.webp"
                 alt="Prof. Dr. Daricelio Moreira Soares"
-                class="rounded-full max-w-[40%] h-auto"
+                class="rounded-full max-w-[40%] h-auto shadow-lg"
                 loading="lazy"
               />
-              <div>
-                <h4 class="font-semibold text-delft-blue">
-                  10:00 - 11:30 | Exposição: Projetos Desenvolvidos no “Projeto
-                  WebAcademy”
-                </h4>
+              <div class="flex-1">
+                <h4 class="font-semibold text-delft-blue text-xl mb-2">10:00 - 11:30 | Exposição: Projetos Desenvolvidos no “Projeto WebAcademy”</h4>
                 <p class="text-gray-700">
-                  <strong>Palestrante:</strong> Prof. Dr. Daricelio Moreira
-                  Soares Professor Adjunto da UFAC, com experiência em
-                  Engenharia de Software e Mineração de Dados. Possui Doutorado
-                  em Engenharia de Sistemas e Informação pela UFF e tem
-                  contribuído amplamente para o desenvolvimento colaborativo e
-                  distribuído de software, além de sistemas de apoio à decisão.
+                  <strong>Palestrante:</strong> Prof. Dr. Daricelio Moreira Soares - Professor Adjunto da UFAC, com experiência em Engenharia de Software e Mineração de Dados. Possui Doutorado em Engenharia de Sistemas e Informação pela UFF e tem contribuído amplamente para o desenvolvimento colaborativo e distribuído de software, além de sistemas de apoio à decisão.
                 </p>
               </div>
             </div>
           </section>
-
+      
           <!-- dia 04/12/2024 -->
-          <section>
-            <h3 class="text-lg font-bold text-blue-800 mb-2">
-              Quarta-feira, 04 de dezembro de 2024
-            </h3>
-
+          <section class="space-y-6 section-hidden">
+            <h3 class="text-3xl font-semibold text-blue-800 mb-4">Quarta-feira, 04 de dezembro de 2024</h3>
+      
             <!-- palestra 2 -->
-            <div class="mb-6 flex flex-col md:flex-row items-start gap-4">
+            <div class="flex flex-col md:flex-row items-start gap-6 bg-gray-100 p-6 rounded-lg">
               <img
                 src="/public/pax/awdren.webp"
                 alt="Prof. Dr. Awdren de Lima Fontão"
-                class="rounded-full max-w-[40%] h-auto"
+                class="rounded-full max-w-[40%] h-auto shadow-lg"
                 loading="lazy"
               />
-              <div>
-                <h4 class="font-semibold text-delft-blue">
-                  08:10 - 09:40 | Palestra 2: Engenharia de Software para
-                  Inteligência Artificial
-                </h4>
-                <p class="text-gray-700"></p>
-                  <strong>Palestrante:</strong> Prof. Dr. Awdren de Lima Fontão
-                  Professor da UFMS, com vasta experiência em Engenharia de
-                  Software aplicada a Machine Learning e Ecossistemas de
-                  Software. Premiado pela SBC por suas contribuições acadêmicas,
-                  Dr. Awdren é uma referência na área e tem liderado iniciativas
-                  voltadas para comunidades de desenvolvedores.
+              <div class="flex-1">
+                <h4 class="font-semibold text-delft-blue text-xl mb-2">08:10 - 09:40 | Palestra 2: Engenharia de Software para Inteligência Artificial</h4>
+                <p class="text-gray-700">
+                  <strong>Palestrante:</strong> Prof. Dr. Awdren de Lima Fontão - Professor da UFMS, com vasta experiência em Engenharia de Software aplicada a Machine Learning e Ecossistemas de Software. Premiado pela SBC por suas contribuições acadêmicas, Dr. Awdren é uma referência na área e tem liderado iniciativas voltadas para comunidades de desenvolvedores.
                 </p>
               </div>
             </div>
-
+      
             <!-- mesa redonda -->
-            <div class="mb-6 flex flex-col md:flex-col items-start gap-4">
-              <div>
-                  <h4 class="font-semibold text-delft-blue">
-                    10:00 - 11:30 | Mesa Redonda: Integração entre Academia e
-                    Startups
-                  </h4>
-                  <div class="text-gray-700">
-                      <strong>Palestrantes:</strong>
-                      <p>
-                        <strong>Prof. Ms. Vander Magalhães Nicácio</strong>:
-                        Consultor de inovação e líder comunitário no Aquiri Valley.
-                      </p>
-                      <p>
-                        <strong>Prof. Ms. Victor Antunes Vieira</strong>: Doutorando
-                        na UFF, cofundador de startups e especialista em Realidade
-                        Estendida e Design Thinking.
-                      </p>
-                      <p>
-                        <strong>Jorge Freitas</strong>: Gestor de projetos em
-                        Ecossistemas de Inovação, com experiência em gestão ágil e
-                        desenvolvimento de .
-                      </p>
-                  </div>
+            <div class="bg-gray-100 p-6 rounded-lg ">
+              <h4 class="font-semibold text-delft-blue text-xl mb-2">10:00 - 11:30 | Mesa Redonda: Integração entre Academia e Startups</h4>
+              <div class="text-gray-700 space-y-4">
+                <strong>Palestrantes:</strong>
+                <p><strong>Prof. Ms. Vander Magalhães Nicácio:</strong> Consultor de inovação e líder comunitário no Aquiri Valley.</p>
+                <p><strong>Prof. Ms. Victor Antunes Vieira:</strong> Doutorando na UFF, cofundador de startups e especialista em Realidade Estendida e Design Thinking.</p>
+                <p><strong>Jorge Freitas:</strong> Gestor de projetos em Ecossistemas de Inovação, com experiência em gestão ágil e desenvolvimento de projetos inovadores.</p>
               </div>
-
-                <div class="flex flex-row gap-4 justify-center items-center">
-                    <img
-                      src="/public/pax/vander.webp"
-                      alt="Mesa Redonda"
-                      class="rounded-full max-w-[40%] h-auto"
-                      loading="lazy"
-                    />
-                    <img
-                      src="/public/pax/victor.webp"
-                      alt="Mesa Redonda"
-                      class="rounded-full max-w-[40%] h-auto"
-                      loading="lazy"
-                    />
-                    <img
-                      src="/public/pax/jorge.webp"
-                      alt="Mesa Redonda"
-                      class="rounded-full max-w-[40%] h-auto"
-                      loading="lazy"
-                    />
+      
+              <div class="flex flex-wrap gap-6 justify-center mt-6">
+                <img
+                  src="/public/pax/vander.webp"
+                  alt="Mesa Redonda"
+                  class="rounded-full max-w-[30%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/public/pax/victor.webp"
+                  alt="Mesa Redonda"
+                  class="rounded-full max-w-[30%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/public/pax/jorge.webp"
+                  alt="Mesa Redonda"
+                  class="rounded-full max-w-[30%] h-auto shadow-lg"
+                  loading="lazy"
+                />
               </div>
             </div>
           </section>
         </div>
       </section>
       
-      <section class="bg-white p-6 rounded-lg shadow-md mb-8 animate-slide-down text-center">
-        <h2 class="text-3xl font-extrabold mb-6 text-blue-900">Mini cursos ofertados</h2>
+      
+      <section class="bg-white p-6 rounded-lg  mb-8 animate-slide-down text-center section-hidden" id="minicursos">
+        <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Mini cursos ofertados</h2>
         <p class="mb-6 text-delft-blue">Aproveite a oportunidade de participar de minicursos exclusivos que combinam teoria e prática para ampliar seus conhecimentos!</p>
         
         <div id="cursos" class="flex flex-col gap-4 py-8 justify-evenly">
           
-            <h2 class="text-2xl font-semibold text-blue-800 mb-4">Dia 1</h2>
+            <h2 class="text-4xl font-semibold text-blue-800 mb-4">Dia 1</h2>
           <!-- Dia 1 -->
           <div id="dia1 w-1/2">
             <!-- Mini curso 1 -->
              
             <div class="group">
-              <button class="minicurso-btn text-left bg-blue-800 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
-                <span>
-                  Minicurso I
-                </span>
-                <span>
-                    hh:mm
-                </span>
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+                  <span>
+                    O uso do bot Github Copilot no Ensino de Programação Orientada a Objetos
+                  </span>
+                  <span>
+                    <strong>Luan Reis de Lima</strong>
+                  </span>
               </button>
-              <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum similique excepturi repudiandae iste delectus tempore ipsam saepe et commodi inventore doloremque sequi autem fugiat fugit quos, a maiores ad voluptatum!.</p>
-                <p class="text-sm text-gray-500">Horário: 14:00 - 16:00 (03/12/2024)</p>
-              </div>
+                  <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                  <img
+                    src="/public/pax/luan.webp"
+                    alt="Luan Reis de Lima"
+                    class="rounded-full max-w-[40%] h-auto shadow-lg"
+                    loading="lazy"
+                  />
+                  <div class="flex flex-col gap-5">
+                    <p class="text-gray-700">Possui graduação em Sistemas de Informação pela Universidade Federal do Acre(2021).
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                    </p>
+                    <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(03/12/2024)</p>
+                    <p class="text-sm text-gray-500">Local: <strong> Laboratório 1 de Sistemas de Informação </strong></p>
+                  </div>
+                </div>
             </div>
       
             <!-- Mini curso 2 -->
             <div class="group">
-              <button class="minicurso-btn text-left bg-blue-800 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
                 <span>
-                  Minicurso II
+                  A Magia dos Grafos e Estruturas de Dados Avançadas
                 </span>
                 <span>
-                    hh:mm
+                 <strong>Italo Oliveira</strong>
                 </span>
               </button>
-              <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum similique excepturi repudiandae iste delectus tempore ipsam saepe et commodi inventore doloremque sequi autem fugiat fugit quos, a maiores ad voluptatum!.</p>
-                <p class="text-sm text-gray-500">Horário: 14:00 - 16:00 (03/12/2024)</p>
-              </div>
+                <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                <img
+                  src="/public/pax/italo.webp"
+                  alt="Italo Oliveira"
+                  class="rounded-full max-w-[40%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <div class="flex flex-col gap-5">
+                  <p class="text-gray-700">Apaixonado por tecnologia, aprendizado de máquina, conhecimento e programação. Estou sempre aprendendo, buscando novidades e me desenvolvendo. Estudo Sistemas de Informação na Universidade Federal do Acre e trabalho como Desenvolvedor Web utilizando tecnologias como Django, Elixir, React, Postgres e Lumen PHP.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                  </p>
+                  <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(03/12/2024)</p>
+                  <p class="text-sm text-gray-500">Local: <strong> Laboratório 1 do Nave Tech </strong></p>
+                </div>
+                </div>
             </div>
       
             <!-- Mini curso 3 -->
             <div class="group">
-              <button class="minicurso-btn text-left bg-blue-800 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
                 <span>
-                  Minicurso III
+                  Iniciação Científica: Teoria e Prática na Pesquisa Acadêmica e Elaboração de Artigos
                 </span>
                 <span>
-                    hh:mm
+                  <strong>Queren-Hapuque Lopes Santana de Queiroz</strong>
                 </span>
               </button>
-              <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum similique excepturi repudiandae iste delectus tempore ipsam saepe et commodi inventore doloremque sequi autem fugiat fugit quos, a maiores ad voluptatum!.</p>
-                <p class="text-sm text-gray-500">Horário: 14:00 - 16:00 (03/12/2024)</p>
-              </div>
+                <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                <img
+                  src="/public/pax/querem.webp"
+                  alt="Queren-Hapuque Lopes Santana de Queiroz"
+                  class="rounded-full max-w-[40%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <div class="flex flex-col gap-5">
+                  <p class="text-gray-700">Formada em Tecnologia da Informação e Gestão de Recursos Humanos, com experiência em segurança do trabalho, gestão administrativa e atendimento ao cliente. Atuou em empresas como Bureau Veritas, Energisa e UFAC, focando em gestão de segurança, contratos e equipes. Pós-graduada em Docência no Ensino Superior e cursando Governança Pública.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                  </p>
+                  <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(03/12/2024)</p>
+                  <p class="text-sm text-gray-500">Local: <strong> Laboratório 2 do Nave Tech</strong></p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Mini curso 4 -->
+            <div class="group">
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+                <span>
+                  Construindo Aplicações com Visão Computacional em Python
+
+                </span>
+                <span>
+                  <strong>Dayan Freitas Alves                  </strong>
+                </span>
+              </button>
+                <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                <img
+                  src="/public/pax/dayan.webp"
+                  alt="Dayan Freitas Alves "
+                  class="rounded-full max-w-[40%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <div class="flex flex-col gap-5">
+                  <p class="text-gray-700">Estudante de Sistemas de Informação pela Universidade Federal do Acre, com habilidades em programação, análise de dados e gerenciamento de projetos. Participa ativamente de projetos em equipe e está em constante estudo de novas tecnologias para aprimorar suas competências. Busca oportunidades de estágio para adquirir experiência prática, atuar como desenvolvedor full-stack e colaborar com equipes multidisciplinares. Tem como meta se tornar especialista em banco de dados e inteligência artificial, contribuindo para o sucesso dos projetos de empresas de tecnologia.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                  </p>
+                  <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(03/12/2024)</p>
+                  <p class="text-sm text-gray-500">Local: <strong> Laboratório 2 de Sistemas de Informação                  </strong></p>
+                </div>
+                </div>
             </div>
           </div>
       
 
-        <h2 class="text-2xl font-semibold text-blue-800 mb-4">Dia 2</h2>
+        <h2 class="text-4xl font-semibold text-blue-900 mb-4">Dia 2</h2>
           <!-- Dia 2 -->
           <div id="dia2">
             <!-- Mini curso 1 -->
             <div class="group">
-              <button class="minicurso-btn text-left bg-blue-800 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
-                <span>
-                  Minicurso I
-                </span>
-                <span>
-                    hh:mm
-                </span>
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+                  <span>
+                    O uso do bot Github Copilot no Ensino de Programação Orientada a Objetos
+                  </span>
+                  <span>
+                    <strong>Luan Reis de Lima</strong>
+                  </span>
               </button>
-              <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum similique excepturi repudiandae iste delectus tempore ipsam saepe et commodi inventore doloremque sequi autem fugiat fugit quos, a maiores ad voluptatum!.</p>
-                <p class="text-sm text-gray-500">Horário: 14:00 - 16:00 (03/12/2024)</p>
-              </div>
+                  <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                  <img
+                    src="/public/pax/luan.webp"
+                    alt="Luan Reis de Lima"
+                    class="rounded-full max-w-[40%] h-auto shadow-lg"
+                    loading="lazy"
+                  />
+                  <div class="flex flex-col gap-5">
+                    <p class="text-gray-700">Possui graduação em Sistemas de Informação pela Universidade Federal do Acre(2021).
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                    </p>
+                    <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(03/12/2024)</p>
+                    <p class="text-sm text-gray-500">Local: <strong> Laboratório 1 de Sistemas de Informação </strong></p>
+                  </div>
+                </div>
             </div>
             
             <!-- Mini curso 2 -->
             <div class="group">
-              <button class="minicurso-btn text-left bg-blue-800 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
                 <span>
-                  Minicurso II
+                  Engenharia de Software Experimental
+
                 </span>
                 <span>
-                    hh:mm
+                  <strong>Prof. Dr. Awdren de Lima Fontão</strong>
                 </span>
               </button>
-              <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum similique excepturi repudiandae iste delectus tempore ipsam saepe et commodi inventore doloremque sequi autem fugiat fugit quos, a maiores ad voluptatum!.</p>
-                <p class="text-sm text-gray-500">Horário: 14:00 - 16:00 (03/12/2024)</p>
-              </div>
+                <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                <img
+                  src="/public/pax/awdren.webp"
+                  alt="Prof. Dr. Awdren de Lima Fontão"
+                  class="rounded-full max-w-[40%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <div class="flex flex-col gap-5">
+                  <p class="text-gray-700">Professor Adjunto da Faculdade de Computação (FACOM) e membro permanente do Programa de Pós-Graduação em Ciência da Computação (PPGCC) da Universidade Federal de Mato Grosso do Sul (UFMS). Doutor e Mestre pela UFAM, com bacharelado em Ciência da Computação pela mesma instituição. Premiado nacionalmente por sua tese e dissertação em Engenharia de Software e Qualidade de Software.
+                  </p>
+                  <p>                    
+                    Com ampla experiência em Developer Relations (DevRel), atuou por seis anos como evangelista de desenvolvedores na Nokia e Microsoft, organizando hackathons, conferências, treinamentos e liderando equipes técnicas.
+                    
+                  </p>
+                  </p>
+                  Pesquisador em Engenharia de Software, com foco em DevRel, Ecossistemas de Software, Mineração de Repositórios de Software, Machine Learning e Engenharia de Software Experimental. Revisor de periódicos e membro de comitês técnicos de eventos acadêmicos. Integra grupos de pesquisa e coordena o Laboratório de Engenharia de Software da FACOM/UFMS.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                  </p>
+                  <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(04/12/2024)</p>
+                  <p class="text-sm text-gray-500">Local: <strong> Laboratório 2 do Nave Tech</strong></p>
+                </div>
+                </div>
             </div>
       
             <!-- Mini curso 3 -->
             <div class="group">
-              <button class="minicurso-btn text-left bg-blue-800 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
                 <span>
-                  Minicurso III
+                  A Magia dos Grafos e Estruturas de Dados Avançadas
                 </span>
                 <span>
-                    hh:mm
+                 <strong>Italo Oliveira</strong>
                 </span>
               </button>
-              <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum similique excepturi repudiandae iste delectus tempore ipsam saepe et commodi inventore doloremque sequi autem fugiat fugit quos, a maiores ad voluptatum!.</p>
-                <p class="text-sm text-gray-500">Horário: 14:00 - 16:00 (03/12/2024)</p>
-              </div>
+                <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                  <img
+                    src="/public/pax/italo.webp"
+                    alt="Italo Oliveira"
+                    class="rounded-full max-w-[40%] h-auto shadow-lg"
+                    loading="lazy"
+                  />
+                  <div class="flex flex-col gap-5">
+                    <p class="text-gray-700">Apaixonado por tecnologia, aprendizado de máquina, conhecimento e programação. Estou sempre aprendendo, buscando novidades e me desenvolvendo. Estudo Sistemas de Informação na Universidade Federal do Acre e trabalho como Desenvolvedor Web utilizando tecnologias como Django, Elixir, React, Postgres e Lumen PHP.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                    </p>
+                    <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(04/12/2024)</p>
+                    <p class="text-sm text-gray-500">Local: <strong> Laboratório 1 do Nave Tech </strong></p>
+                  </div>
+                </div>
+            </div>
+      
+      
+            <!-- Mini curso 4 -->
+            <div class="group">
+              <button class="minicurso-btn text-left bg-blue-900 text-white p-4 mb-2 rounded hover:bg-blue-600 w-full flex flex-row justify-center gap-4">
+                <span>
+                  OSINT: Investigação Digital
+
+                </span>
+                <span>
+                  <strong>Santiago Rocha de Melo</strong>
+                </span>
+              </button>
+                <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
+                <img
+                  src="/public/pax/santiago.webp"
+                  alt="Santiago Rocha de Melo"
+                  class="rounded-full max-w-[40%] h-auto shadow-lg"
+                  loading="lazy"
+                />
+                <div class="flex flex-col gap-5">
+                  <p class="text-gray-700">Estudante de Sistemas de Informação e Cybersegurança | Programador PHP, Python, Java e Web | Entusiasta de IA e Segurança da Informação | Apreciador de Linux e novas tecnologias de desenvolvimento. Apaixonado por tecnologia, programação e segurança digital.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum vel illum fugit obcaecati dolores, ducimus ex eum pariatur accusantium officia reiciendis quas doloremque maiores maxime animi labore numquam aspernatur.
+                  </p>
+                  <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(04/12/2024)</p>
+                  <p class="text-sm text-gray-500">Local: <strong> Laboratório 2 de Sistemas de Informação</strong></p>
+                </div>
+                </div>
             </div>
           </div>
         </div>
       </section>
 
 
-      <section class="bg-white p-6 rounded-lg shadow-md mb-8 animate-slide-down text-center flex flex-col items-center">
-        <h2 class="text-xl font-bold mb-4 text-oxford-blue">Apoio</h2>
-        <p>Realização:</p>
-        <p>Conteúdo da seção apoio</p>
+      <section class="bg-white p-6 rounded-lg  mb-8 animate-slide-down text-center flex flex-col items-center font-pixelify-bold section-hidden" id="apoio">
+        <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Patrocinio</h2>
       
-        <div class="flex justify-center items-center h-full"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          <script>
-            const sponsors = [
-              { src: "/public/sponsors/motorola.svg", alt: "Motorola" },
-              { src: "/public/sponsors/alura.svg", alt: "Alura" },
-              { src: "/public/sponsors/rocketseat.svg", alt: "Rocketseat" },
-              { src: "/public/sponsors/rocketseat.svg", alt: "Rocketseat" },
-            ];
-      
-            sponsors.forEach(sponsor => {
-              document.write(`
-                <div class="bg-gray-800 p-4 rounded-lg shadow-md w-72 h-72 flex justify-center items-center">
-                    <img src="${sponsor.src}" alt="${sponsor.alt}" class="w-full h-auto" />
-                </div>
-              `);
-            });
-          </script>
+        <div class="flex justify-center items-center h-full">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+            <script>
+              const sponsors = [
+                { src: "/public/sponsors/ufac_branco.svg", alt: "Universidade Federal do Acre", },
+                { src: "/public/sponsors/motorola.svg", alt: "Motorola" },
+              ];
+        
+              sponsors.forEach(sponsor => {
+                document.write(`
+                  <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="${sponsor.src}" alt="${sponsor.alt}" class="w-full h-auto" />
+                  </div>
+                `);
+              });
+            </script>
+          </div>
         </div>
+
+        <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Apoio</h2>
+      
+        <div class="flex justify-center items-center h-full">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+            <script>
+              const backing = [
+                { src: "/public/sponsors/alura.svg", alt: "Alura" },
+                { src: "/public/sponsors/rocketseat.svg", alt: "Rocketseat" },
+              ];
+        
+              backing.forEach(sponsor => {
+                document.write(`
+                  <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="${sponsor.src}" alt="${sponsor.alt}" class="w-full h-auto" />
+                  </div>
+                `);
+              });
+            </script>
+          </div>
+        </div>
+
       </section>
       
     </main>
 
     <footer>
-      <p>conteudo da footer</p>
+      <!-- <p>conteudo da footer</p> -->
     </footer>
-
+    <a href="#top" id="scrollToTop" class="fixed bottom-5 right-5 bg-blue-900 text-white p-5 rounded-full hover:bg-blue-700 transition duration-300 z-50">
+      ↑
+    </a>
+    
     <script src="indexScript.js"></script>
+
+    
     <script src="src/alternativeBackground/script.js"></script>
   </body>
 </html>

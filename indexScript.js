@@ -2,6 +2,32 @@ const buttons = document.querySelectorAll(".minicurso-btn");
 
 let isGameRunning = false;
 
+document.addEventListener("DOMContentLoaded", () => {
+  // conferir o css global pra entender
+  const sections = document.querySelectorAll(".section-hidden");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-visible");
+          entry.target.classList.remove("section-hidden");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 } // o quanto de visibilidade precisa pra começar a aparecer (0 a 1, é uma porcentagem)
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+// navbar colapse
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("hidden");
+});
+
 // colapser de minicursos
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -29,7 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
   pointer.style.position = "absolute";
   pointer.style.zIndex = "1000";
   pointer.style.transition = "all 0.5s ease";
-  document.body.appendChild(pointer);
+  pointer.style.cursor = "grab";
+  if (!/Mobi|Android/i.test(navigator.userAgent)) {
+    document.body.appendChild(pointer);
+  }
 
   // randomizador da bolinha -- pagina toda
   function movePointerRandomly() {
@@ -46,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // intervalo da reincidencia do movimento em ms
   setInterval(movePointerRandomly, 5000);
 
-  let counter = 1;
+  let counter = 0;
   const counterDisplay = document.createElement("div");
   counterDisplay.style.position = "fixed";
   counterDisplay.style.top = "10px";
@@ -56,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
   counterDisplay.style.border = "1px solid black";
   counterDisplay.style.zIndex = "1000";
   counterDisplay.innerText = `Counter: ${counter}`;
-  // document.body.appendChild(counterDisplay);
 
   pointer.addEventListener("click", () => {
     counter++;
@@ -211,8 +239,7 @@ function startBreakoutGame() {
     if (blocksRemaining === 0) {
       setTimeout(() => {
         alert(
-          "PARABÉNS! VOCÊ VENCEU O JOGO! PROCURE A STAFF COM O CÓDIGO: " +
-            encodedCode
+          "PARABÉNS! VOCÊ VENCEU O JOGO! CÓDIGO COMPROBATÓRIO: " + encodedCode
         );
         closeButton.click();
       }, 200);
