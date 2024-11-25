@@ -34,6 +34,7 @@
             <li><a href="#programacao" class="block py-2 lg:py-0 hover:text-gray-300">PROGRAMAÇÃO</a></li>
             <li><a href="#minicursos" class="block py-2 lg:py-0 hover:text-gray-300">MINICURSOS</a></li>
             <li><a href="#apoio" class="block py-2 lg:py-0 hover:text-gray-300">PATROCINIO/APOIO</a></li>
+            <li><a href="/pages/maratona.html" class="block py-2 lg:py-0 hover:text-gray-300">MARATONINHA</a></li>
           </ul>
         </nav>
       </div>
@@ -495,39 +496,47 @@
         <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Patrocinio</h2>
       
         <div class="flex justify-center items-center h-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             <script>
               const sponsors = [
-                { src: "public/sponsors/ufac_branco.svg", alt: "Universidade Federal do Acre", },
-                { src: "public/sponsors/motorola.svg", alt: "Motorola" },
+                { src: "public/sponsors/ufac_branco.svg", alt: "Universidade Federal do Acre", url:"https://www.ufac.br/" },
+                { src: "public/sponsors/motorola_white.svg", alt: "Motorola", url:"https://www.motorola.com.br/" },
+                { src: "public/sponsors/proex.png", alt: "Pró-Reitoria de Extensão e Cultura", url:"https://www.ufac.br/site/ufac/proex" },
               ];
         
               sponsors.forEach(sponsor => {
                 document.write(`
-                  <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                <div class="flex flex-col justify-center items-center">  
+                <a  href="${sponsor.url}" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
                       <img src="${sponsor.src}" alt="${sponsor.alt}" class="w-full h-auto" />
-                  </div>
+                  </div> </a>
+                  <span>${sponsor.alt}</span></div>
                 `);
               });
             </script>
           </div>
         </div>
-
+<!--  piticas, cidTec, sem fronteiras, rocketseat e algorithms school -->
         <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Apoio</h2>
       
         <div class="flex justify-center items-center h-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             <script>
               const backing = [
-                { src: "public/sponsors/alura.svg", alt: "Alura" },
-                { src: "public/sponsors/rocketseat.svg", alt: "Rocketseat" },
+                { src: "public/sponsors/sem_fronteiras.png", alt: "Sem Fronteiras Ultra-Fibra", url: "http://semfronteiras.net.br/" },
+                { src: "public/sponsors/algschool.png", alt: "Algorithms School", url: "https://www.instagram.com/algorithmsschool/" },
+                { src: "public/sponsors/rocketseat.svg", alt: "Rocketseat" , url: "https://rocketseat.com.br/"},
+                { src: "public/sponsors/piticas.png", alt: "Piticas", url: "https://www.instagram.com/piticasacre/" },
+                { src: "public/sponsors/cidtec.png", alt: "CIDTEC", url: "https://www.instagram.com/cidtecinformatica/" },
               ];
         
               backing.forEach(sponsor => {
                 document.write(`
-                  <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                <div class="flex flex-col justify-center items-center">  
+                <a  href="${sponsor.url}"  target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
                       <img src="${sponsor.src}" alt="${sponsor.alt}" class="w-full h-auto" />
-                  </div>
+                  </div> </a>
+                  <span>${sponsor.alt}</span></div>
                 `);
               });
             </script>
@@ -536,14 +545,48 @@
 
       </section>
       
-    </main>
 
-    <footer>
-      <!-- <p>conteudo da footer</p> -->
+    <footer class="bg-blue-900 text-white p-4 text-center">
+      
+      <section class="bg-blue-900 py-8 section-hidden flex flex-row gap-8 justify-center w-full ">
+        <div class="flex justify-center items-center gap-8">
+          
+        <!-- Organização -->
+            <div>
+              <p class="text-lg font-semibold mb-2">Organização</p>
+              <div class="text-sm text-gray-300">
+                <p>Departamento de Sistemas de Informação</p>
+                <p>Universidade Federal do Acre</p>
+              </div>
+            </div>
+
+       <!-- Desenvolvedores -->
+            <div>
+              <p class="text-lg font-semibold mb-2">Desenvolvido por</p>
+              <div class="text-sm text-gray-300">
+                <p>Equipe organizadora da Semana Acadêmica</p>
+                <p>
+                  e pelo
+                  <a href="https://www.linkedin.com/in/crcoelhos/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Christopher</a>
+                </p>
+              </div>
+            </div>
+
+        <!-- Maratona -->
+          <div>
+            <p class="text-lg font-semibold mb-2">Atividades</p>
+            <p>
+              <a href="#" class="text-blue-300 hover:underline">Maratona de Programação</a>
+            </p>
+          </div>
+
+        </div>
+      </section>
     </footer>
     <a href="#top" id="scrollToTop" class="fixed bottom-5 right-5 bg-blue-900 text-white p-5 rounded-full hover:bg-blue-700 transition duration-300 z-50">
       ↑
     </a>
+  </main>
     
     <script src="indexScript.js"></script>
 
