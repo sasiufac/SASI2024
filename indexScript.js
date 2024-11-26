@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll(".minicurso-btn");
+console.log("Code has been loaded");
 
 let isGameRunning = false;
 
