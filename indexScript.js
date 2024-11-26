@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".minicurso-btn");
-console.log("Code has been loaded");
+console.log("me disseram que tem um ovo por ai 🐰");
 
 let isGameRunning = false;
 
