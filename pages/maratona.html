@@ -1,9 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MARATONINHA</title>
+    <title>SASI - UFAC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=IBM+Plex+Sans:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body></body>
+
+  <body class="font-sans text-lg md:text-base sm:text-sm">
+    <header
+      class="bg-blue-900 h-24 text-white fixed top-0 w-full z-50 shadow-black"
+    >
+      <div
+        class="container mx-auto px-4 flex items-center justify-between h-full"
+      >
+        <a href="https://sasiufac.github.io/SASI2024/">
+          <img
+            src="/public/flat_sasi_white.svg"
+            alt="SASI LOGO"
+            class="h-16 md:h-20 lg:h-24"
+          />
+        </a>
+        <button
+          id="menu-toggle"
+          class="lg:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <nav
+          id="menu"
+          class="hidden lg:flex flex-col lg:flex-row lg:items-center h-full lg:h-auto"
+        >
+          <ul
+            class="flex flex-col lg:flex-row lg:space-x-6 font-pixelify-bold text-2xl lg:text-4xl bg-blue-900 lg:bg-transparent"
+          >
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/#programacao"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >PROGRAMAÇÃO</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/#minicursos"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >MINICURSOS</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/#apoio"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >APOIO</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/pages/maratona.html"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >MARATONINHA</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 pt-64 relative z-20">
+      <div id="animation-bg" class="fixed inset-0 w-full h-full"></div>
+
+      <section class="flex justify-center my-8 section-hidden">
+        <img
+          src="public/round_logo.png"
+          alt="chamada publica com data para a Primeira Semana Acadêmica de Sistemas de Informação - UFAC - 2024."
+          class="max-w-full h-auto"
+          loading="lazy"
+        />
+      </section>
+
+      <!-- <section class="flex flex-row gap-8 section-hidden">
+        <div class="bg-white p-6 rounded-lg  mb-8 animate-slide-down">
+          
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg  mb-8 animate-slide-down inline-block"
+        >
+        </div>
+      </section> -->
+
+      <section
+        id="minicards"
+        class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto section-hidden flex flex-col md:flex-row gap-8"
+      >
+        <div class="flex-1">
+          <h2
+            class="text-3xl font-pixelify-bold mb-6 text-blue-900 text-center"
+          >
+            Maratona de programação - SASI 2024
+          </h2>
+          <p class="text-delft-blue">
+            A 1ª Semana Acadêmica de Sistemas de Informação da UFAC está
+            chegando e com ela a Maratona de Programação! O evento é uma ótima
+            oportunidade para você testar seus conhecimentos e habilidades em
+            programação, além de ser uma excelente oportunidade para você se
+            conectar com outros estudantes e profissionais da área.
+          </p>
+          <p class="text-delft-blue">
+            A maratona será realizada no dia 5 de novebro de 2024, das 14h às
+            18h, e será composta por 5 questões de programação. As equipes
+            participantes poderão ser compostas por até 3 integrantes e as
+            inscrições são gratuitas.
+          </p>
+          <p class="mt-4">
+            Quer participar?
+            <a
+              href="https://www.even3.com.br/sasiufac/"
+              target="_blank"
+              class="text-delft-blue font-bold uppercase hover:text-blue-800 hover:underline font-pixelify"
+              rel="noopener noreferrer"
+              >Clique aqui!</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <footer class="bg-blue-900 text-white p-4 text-center">
+        <section
+          class="bg-blue-900 py-8 section-hidden flex flex-row gap-8 justify-center w-full"
+        >
+          <div
+            class="flex-row justify-center items-center gap-8 md:flex-col sm:flex-col gap-8"
+          >
+            <!-- Organização -->
+            <div>
+              <p class="text-lg font-semibold mb-2">Organização</p>
+              <div class="text-sm text-gray-300">
+                <p>Departamento de Sistemas de Informação</p>
+                <p>Universidade Federal do Acre</p>
+              </div>
+            </div>
+
+            <!-- Desenvolvedores -->
+            <div>
+              <p class="text-lg font-semibold mb-2">Desenvolvido por</p>
+              <div class="text-sm text-gray-300">
+                <p>Equipe organizadora da Semana Acadêmica</p>
+                <p>
+                  &
+                  <a
+                    href="https://www.linkedin.com/in/crcoelhos/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-200 hover:underline"
+                    >Christopher Saar</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- Maratona -->
+            <div>
+              <p class="text-lg font-semibold mt-2">Atividades</p>
+              <p>
+                <a href="#" class="text-blue-300 hover:underline"
+                  >Maratona de Programação</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <a
+        href="#top"
+        id="scrollToTop"
+        class="fixed bottom-5 right-5 bg-blue-900 text-white p-5 rounded-full hover:bg-blue-700 transition duration-300 z-50"
+      >
+        ↑
+      </a>
+    </main>
+
+    <script src="/indexScript.js" defer></script>
+
+    <script src="/src/alternativeBackground/script.js" defer></script>
+
+    <div class="hidden-easter-egg">me disseram que tem um ovo por ai 🐰</div>
+  </body>
 </html>

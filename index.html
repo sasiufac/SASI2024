@@ -23,22 +23,25 @@
   <body class="font-sans text-lg md:text-base sm:text-sm">
     <header class="bg-blue-900 h-24 text-white fixed top-0 w-full z-50 shadow-black">
       <div class="container mx-auto px-4 flex items-center justify-between h-full">
-        <img src="public/flat_sasi_white.svg" alt="SASI LOGO" class="h-16 md:h-20 lg:h-24">
+        <a href="https://sasiufac.github.io/SASI2024/">
+          <img src="public/flat_sasi_white.svg" alt="SASI LOGO" class="h-16 md:h-20 lg:h-24">
+        </a>
         <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
-        <nav id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center h-full">
-          <ul class="flex flex-col lg:flex-row lg:space-x-6 font-pixelify-bold text-2xl lg:text-4xl">
-            <li><a href="#programacao" class="block py-2 lg:py-0 hover:text-gray-300">PROGRAMAÇÃO</a></li>
-            <li><a href="#minicursos" class="block py-2 lg:py-0 hover:text-gray-300">MINICURSOS</a></li>
-            <li><a href="#apoio" class="block py-2 lg:py-0 hover:text-gray-300">PATROCINIO/APOIO</a></li>
-            <li><a href="/pages/maratona.html" class="block py-2 lg:py-0 hover:text-gray-300">MARATONINHA</a></li>
+        <nav id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center h-full lg:h-auto">
+          <ul class="flex flex-col lg:flex-row lg:space-x-6 font-pixelify-bold text-2xl lg:text-4xl bg-blue-900 lg:bg-transparent">
+            <li><a href="#programacao" class="block py-2 px-4 lg:py-0 hover:text-gray-300">PROGRAMAÇÃO</a></li>
+            <li><a href="#minicursos" class="block py-2 px-4 lg:py-0 hover:text-gray-300">MINICURSOS</a></li>
+            <li><a href="#apoio" class="block py-2 px-4 lg:py-0 hover:text-gray-300">APOIO</a></li>
+            <li><a href="/pages/maratona.html" class="block py-2 px-4 lg:py-0 hover:text-gray-300">MARATONINHA</a></li>
           </ul>
         </nav>
       </div>
     </header>
+    
   
 
     <main class="container mx-auto px-4 pt-64 relative z-20">
@@ -80,12 +83,12 @@
           <p class="text-delft-blue">
             Fique ligado e não deixe de participar desse marco histórico para a nossa comunidade acadêmica!
           </p>
-          <p class="text-delft-blue mt-4 font-bold">
+          <p class="text-delft-blue mt-4 font-bold text-center">
             Data: 03 e 04 de dezembro (08:00)<br />
             Local: Universidade Federal do Acre (UFAC) - Anfiteatro Garibaldi
             Brasil
           </p>
-          <p class=" mt-4">
+          <p class="mt-4 text-center">
             Quer participar?
             <a
               href="https://www.even3.com.br/sasiufac/"
@@ -236,7 +239,7 @@
         
         <div id="cursos" class="flex flex-col gap-4 py-8 justify-evenly">
           
-            <h2 class="text-4xl font-semibold text-blue-800 mb-4">Dia 1</h2>
+            <h2 class="text-4xl font-semibold text-blue-800 mb-4 font-pixelify-bold">Dia 1</h2>
           <!-- Dia 1 -->
           <div id="dia1 w-1/2">
             <!-- Mini curso 1 -->
@@ -335,7 +338,7 @@
 
                 </span>
                 <span>
-                  <strong>Dayan Freitas Alves                  </strong>
+                  <strong>Dayan Freitas Alves</strong>
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
@@ -359,7 +362,7 @@
           </div>
       
 
-        <h2 class="text-4xl font-semibold text-blue-900 mb-4">Dia 2</h2>
+        <h2 class="text-4xl font-semibold text-blue-900 mb-4 font-pixelify-bold">Dia 2</h2>
           <!-- Dia 2 -->
           <div id="dia2">
             <!-- Mini curso 1 -->
@@ -517,7 +520,7 @@
           </div>
         </div>
 <!--  piticas, cidTec, sem fronteiras, rocketseat e algorithms school -->
-        <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold">Apoio</h2>
+        <h2 class="text-4xl md:text-6xl lg:text-8xl mb-6 text-blue-900 text-center font-pixelify-bold mt-12">Apoio</h2>
       
         <div class="flex justify-center items-center h-full">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
@@ -548,12 +551,12 @@
 
     <footer class="bg-blue-900 text-white p-4 text-center">
       
-      <section class="bg-blue-900 py-8 section-hidden flex flex-row gap-8 justify-center w-full ">
-        <div class="flex justify-center items-center gap-8">
+      <section class="bg-blue-900 py-8 section-hidden flex flex-row gap-8 justify-center w-full rounded-sm ">
+        <div class="flex-row justify-center items-center md:flex-col sm:flex-col gap-16">
           
         <!-- Organização -->
-            <div>
-              <p class="text-lg font-semibold mb-2">Organização</p>
+            <div class=" my-2">
+              <p class="text-lg font-semibold">Organização</p>
               <div class="text-sm text-gray-300">
                 <p>Departamento de Sistemas de Informação</p>
                 <p>Universidade Federal do Acre</p>
@@ -562,19 +565,18 @@
 
        <!-- Desenvolvedores -->
             <div>
-              <p class="text-lg font-semibold mb-2">Desenvolvido por</p>
+              <p class="text-lg font-semibold my-2">Desenvolvido por</p>
               <div class="text-sm text-gray-300">
                 <p>Equipe organizadora da Semana Acadêmica</p>
                 <p>
-                  e pelo
-                  <a href="https://www.linkedin.com/in/crcoelhos/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Christopher</a>
+                  <a href="https://www.linkedin.com/in/crcoelhos/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Christopher Saar</a>
                 </p>
               </div>
             </div>
 
         <!-- Maratona -->
-          <div>
-            <p class="text-lg font-semibold mb-2">Atividades</p>
+          <div class="my-2">
+            <p class="text-lg font-semibold">Atividades</p>
             <p>
               <a href="#" class="text-blue-300 hover:underline">Maratona de Programação</a>
             </p>
@@ -588,9 +590,19 @@
     </a>
   </main>
     
-    <script src="indexScript.js"></script>
+    <script src="indexScript.js" defer></script>
 
     
-    <script src="src/alternativeBackground/script.js"></script>
+    <script src="src/alternativeBackground/script.js" defer></script>
+
+
+
+
+    
+    <div class="hidden-easter-egg"> me disseram que tem um ovo por ai 🐰</div>
+ 
+
   </body>
 </html>
+
+

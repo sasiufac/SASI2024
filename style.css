@@ -40,11 +40,9 @@ body {
   overflow: hidden;
 } */
 
-
 body {
   padding-top: 122px;
 }
-
 
 .minicurso-content {
   overflow: hidden;
@@ -79,4 +77,13 @@ html {
 .section-visible {
   opacity: 1;
   animation: fadeInUp 0.8s ease-out forwards; /* so tem animaçãoquando aparece, o depois não existe */
+}
+
+.hidden-easter-egg {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
