@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASI - UFAC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="keywords"
+      content="SASI, UFAC, Semana Acadêmica, Sistemas de Informação, Maratona de Programação, Programação, Evento Acadêmico, Universidade Federal do Acre, crcoelhos"
+    />
+
+    <link rel="stylesheet" href="/SASI2024/style.css" />
+    <link rel="stylesheet" href="/SASI2024/src/assets/fonts/fonts.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://sasiufac.github.io/SASI2024/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://sasiufac.github.io/SASI2024/public/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://sasiufac.github.io/SASI2024/public/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="sasi" />
+    <link
+      rel="manifest"
+      href="https://sasiufac.github.io/SASI2024/public/site.webmanifest"
+    />
+  </head>
+
+  <body class="font-sans text-lg md:text-base sm:text-sm">
+    <header
+      class="bg-blue-900 h-24 text-white fixed top-0 w-full z-50 shadow-black"
+    >
+      <div
+        class="container mx-auto px-4 flex items-center justify-between h-full"
+      >
+        <a href="https://sasiufac.github.io/SASI2024/">
+          <img
+            src="/SASI2024/public/flat_sasi_white.svg"
+            alt="SASI LOGO"
+            class="h-16 md:h-20 lg:h-24"
+          />
+        </a>
+        <button
+          id="menu-toggle"
+          class="lg:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <nav
+          id="menu"
+          class="hidden lg:flex flex-col lg:flex-row lg:items-center h-full lg:h-auto"
+        >
+          <ul
+            class="flex flex-col lg:flex-row lg:space-x-6 font-pixelify-bold text-2xl lg:text-4xl bg-blue-900 lg:bg-transparent"
+          >
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/#programacao"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >PROGRAMAÇÃO</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/#minicursos"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >MINICURSOS</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/#apoio"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >APOIO</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/pages/maratona.html"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >MARATONINHA</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://sasiufac.github.io/SASI2024/pages/equipe.html"
+                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
+                >EQUIPE</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 pt-64 relative z-20">
+      <div id="animation-bg" class="fixed inset-0 w-full h-full"></div>
+
+      <section class="flex justify-center my-8 section-hidden">
+        <img
+          src="/SASI2024/public/round_logo.png"
+          alt="chamada publica com data para a Primeira Semana Acadêmica de Sistemas de Informação - UFAC - 2024."
+          class="max-w-full h-auto"
+          loading="lazy"
+        />
+      </section>
+
+      <section
+        id="minicards"
+        class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto section-hidden flex flex-col md:flex-row gap-8 no-underline"
+      >
+        <div class="flex-1">
+          <h2
+            class="text-4xl font-pixelify-bold mb-6 text-blue-900 text-center"
+          >
+            EQUIPE ORGANIZADORA DO SASI I
+          </h2>
+
+          <!-- EQUIPE -->
+          <div class="flex flex-col gap-8">
+            <!-- PROFESSORES -->
+            <div
+              class="flex flex-wrap justify-center gap-4 font-pixelify-bold text-lg"
+            >
+              <a
+                href="http://lattes.cnpq.br/0709055761030272"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/raoni.webp"
+                    alt="Prof. Dr. Raoni Simões Ferreira"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Prof. Dr. Raoni Simões Ferreira</span>
+                </div></a
+              >
+              <a
+                href="http://lattes.cnpq.br/3445843226759945"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/catarina.webp"
+                    alt="Profa. Dra. Catarina de Souza Costa"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Profa. Dra. Catarina de Souza Costa</span>
+                </div></a
+              >
+              <a
+                href="http://lattes.cnpq.br/7376671815596508"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/daricelio.webp"
+                    alt="Prof. Dr Daricelio Moreira Soares"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Prof. Dr Daricelio Moreira Soares</span>
+                </div></a
+              >
+            </div>
+
+            <!-- ALUNOS -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6 font-pixelify-bold text-lg"
+            >
+              <a
+                href="https://www.linkedin.com/in/dayanfa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+                ><div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/dayan.webp"
+                    alt="Dayan Freitas Alves"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span> Dayan Freitas Alves</span>
+                </div></a
+              >
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/lulu.webp"
+                    alt='Ana Heloísa "Lulu" Freire Aires'
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Lulu</span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/benny-pinheiro"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/benny.webp"
+                    alt="Benny Pinheiro Cunha Lopes"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Benny Pinheiro Cunha Lopes</span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/elias-de-oliveira-cacau-b86573261"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/elias.webp"
+                    alt="Elias de Oliveira Cacau"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Elias de Oliveira Cacau</span>
+                </div>
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/gabriel.webp"
+                    alt="Gabriel Daniel da Silva"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Gabriel Daniel da Silva</span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/crcoelhos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+                ><div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/christopher.webp"
+                    alt="Christopher Ric Coelho Saar"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span> Christopher Ric Coelho Saar </span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/alexandre-pinheiro-lira-2435b421b"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+                ><div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/alexandre.webp"
+                    alt="Alexandre Pinheiro Lira"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Alexandre Pinheiro Lira </span>
+                </div></a
+              >
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/maria_clara.webp"
+                    alt="Maria Clara de Souza Barroso"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Maria Clara de Souza Barroso</span>
+                </div></a
+              >
+              <a
+                href="https://www.linkedin.com/in/andrey-marques-79723633b"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+                ><div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/andrey.webp"
+                    alt="Andrey da Cunha Marques"
+                    class="w-32 h-32"
+                  />
+                  <span>Andrey da Cunha Marques</span>
+                </div></a
+              >
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/fabiana.webp"
+                    alt="Fabiana Santana Rocha"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Fabiana Santana Rocha</span>
+                </div></a
+              >
+              <a
+                href="https://www.linkedin.com/in/carlos-eduardo-marin-bezerra-75036b33b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 hover:scale-105 transition duration-300"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <img
+                    src="/SASI2024/public/pax/carlos.webp"
+                    alt="Carlos Eduardo Marin Bezerra"
+                    class="w-32 h-32 rounded-md object-cover"
+                  />
+                  <span>Carlos Eduardo Marin Bezerra</span>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-blue-900 text-white p-4 text-center">
+        <div
+          class="bg-blue-900 py-8 section-hidden flex flex-col gap-8 justify-center w-full rounded-sm"
+        >
+          <div
+            class="justify-center items-center gap-12 flex flex-col md:flex-col"
+          >
+            <!-- organização -->
+            <div class="my-2">
+              <p class="text-lg font-semibold">ORGANIZAÇÃO</p>
+              <div class="text-lg text-gray-300">
+                <p>
+                  <a
+                    href="https://www.ufac.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-200"
+                    >Universidade Federal do Acre</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="http://csi.ufac.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-200"
+                    >Curso de Sistemas de Informação</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="http://www2.ufac.br/ppgcc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-200"
+                    >Programa de Pós-Graduação em Ciencia da Computação</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- desenvolvedores -->
+            <div>
+              <p class="text-lg font-semibold my-2">DESENVOLVIDO POR</p>
+              <div class="text-lg text-gray-300">
+                <p>
+                  <a
+                    href="https://sasiufac.github.io/SASI2024/pages/equipe.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-200"
+                    >Equipe organizadora da Semana Acadêmica</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/crcoelhos/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-200"
+                    >Christopher Saar</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- maratona -->
+            <div class="my-2 text-lg">
+              <p class="text-lg font-semibold">ATIVIDADES</p>
+              <p>
+                <a
+                  href="https://www.even3.com.br/sasiufac/"
+                  class="text-blue-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-200"
+                  >Evento principal</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://sasiufac.github.io/SASI2024/pages/maratona.html"
+                  class="text-blue-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-200"
+                  >Maratona de Programação</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.instagram.com/sasiufac/"
+                  class="text-blue-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-200"
+                  >Achou um código? nos contate!</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <a
+        href="#top"
+        id="scrollToTop"
+        class="fixed bottom-5 right-5 bg-blue-900 text-white p-5 rounded-full hover:bg-blue-700 transition duration-300 z-50"
+      >
+        ↑
+      </a>
+    </main>
+
+    <script src="/SASI2024/indexScript.js" defer></script>
+
+    <script src="/SASI2024/src/alternativeBackground/script.js" defer></script>
+  </body>
+</html>
