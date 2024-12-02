@@ -1,73 +1,516 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" /> 
-    <meta
-    name="description"
-    content="Participe da 1ª Semana Acadêmica de Sistemas de Informação da UFAC. Eventos, palestras, minicursos e networking para estudantes e profissionais de TI."
-    />
-    <meta
-      name="keywords"
-      content="SASI, SASI 2024, UFAC, Semana Acadêmica, Sistemas de Informação, Maratona de Programação, Programação, Evento Acadêmico, Universidade Federal do Acre, crcoelhos"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- saved from url=(0036)https://sasiufac.github.io/SASI2024/ -->
+<html lang="pt-br" data-qb-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASI - UFAC</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link href="./kaua_files/tailwind.min.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="./kaua_files/css2" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=IBM+Plex+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./kaua_files/css2(1)" rel="stylesheet">
+    <link href="./kaua_files/css2(2)" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./kaua_files/style.css">
 
-    <link rel="icon" type="image/png" href="public/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="https://sasiufac.github.io/SASI2024/favicon.svg" />
-    <link rel="shortcut icon" href="https://sasiufac.github.io/SASI2024/public/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://sasiufac.github.io/SASI2024/public/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="sasi" />
-    <link rel="manifest" href="https://sasiufac.github.io/SASI2024/public/site.webmanifest" />
+    <link rel="icon" type="image/png" href="https://sasiufac.github.io/SASI2024/public/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="https://sasiufac.github.io/SASI2024/favicon.svg">
+    <link rel="shortcut icon" href="https://sasiufac.github.io/SASI2024/public/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sasiufac.github.io/SASI2024/public/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="sasi">
+    <link rel="manifest" href="https://sasiufac.github.io/SASI2024/public/site.webmanifest">
 
-  </head>
+  <style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
 
-  <body class="font-sans text-lg md:text-base sm:text-sm">
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style><style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style></head>
+
+  <body class="font-sans text-lg md:text-base sm:text-sm" cz-shortcut-listen="true">
     <header class="bg-blue-900 h-24 text-white fixed top-0 w-full z-50 shadow-black">
       <div class="container mx-auto px-4 flex items-center justify-between h-full">
         <a href="https://sasiufac.github.io/SASI2024/">
-          <img src="public/flat_sasi_white.svg" alt="SASI LOGO" class="h-16 md:h-20 lg:h-24">
+          <img src="./kaua_files/flat_sasi_white.svg" alt="SASI LOGO" class="h-16 md:h-20 lg:h-24">
         </a>
         <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
         <nav id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center h-full lg:h-auto">
           <ul class="flex flex-col lg:flex-row lg:space-x-6 font-pixelify-bold text-2xl lg:text-4xl bg-blue-900 lg:bg-transparent">
             <li>
-              <a
-                href="https://sasiufac.github.io/SASI2024/#programacao"
-                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
-                >PROGRAMAÇÃO</a
-              >
+              <a href="https://sasiufac.github.io/SASI2024/#programacao" class="block py-2 px-4 lg:py-0 hover:text-gray-300">PROGRAMAÇÃO</a>
             </li>
             <li>
-              <a
-                href="https://sasiufac.github.io/SASI2024/#minicursos"
-                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
-                >MINICURSOS</a
-              >
+              <a href="https://sasiufac.github.io/SASI2024/#minicursos" class="block py-2 px-4 lg:py-0 hover:text-gray-300">MINICURSOS</a>
             </li>
             <li>
-              <a
-                href="https://sasiufac.github.io/SASI2024/#apoio"
-                class="block py-2 px-4 lg:py-0 hover:text-gray-300"
-                >APOIO</a
-              >
+              <a href="https://sasiufac.github.io/SASI2024/#apoio" class="block py-2 px-4 lg:py-0 hover:text-gray-300">APOIO</a>
             </li>
             <li><a href="https://sasiufac.github.io/SASI2024/pages/maratona.html" class="block py-2 px-4 lg:py-0 hover:text-gray-300">MARATONINHA</a></li>
             <li><a href="https://sasiufac.github.io/SASI2024/pages/equipe.html" class="block py-2 px-4 lg:py-0 hover:text-gray-300">EQUIPE</a></li>
@@ -79,21 +522,16 @@
   
 
     <main class="container mx-auto px-4 pt-64 relative z-20">
-      <div id="animation-bg" class="fixed inset-0 w-full h-full"></div>
+      <div id="animation-bg" class="fixed inset-0 w-full h-full"><canvas width="1920" height="925"></canvas></div>
 
-        <section class="flex justify-center my-8 section-hidden ">
-          <img
-            src="public/round_logo.png"
-            alt="chamada publica com data para a Primeira Semana Acadêmica de Sistemas de Informação - UFAC - 2024."
-            class="max-w-full h-auto"
-            loading="lazy"
-          />
+        <section class="flex justify-center my-8 section-visible">
+          <img src="./kaua_files/round_logo.png" alt="chamada publica com data para a Primeira Semana Acadêmica de Sistemas de Informação - UFAC - 2024." class="max-w-full h-auto" loading="lazy">
         </section>
 
     
 
 
-      <section id="minicards" class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto section-hidden flex flex-col md:flex-row gap-8">
+      <section id="minicards" class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto flex flex-col md:flex-row gap-8 section-visible">
         <div class="flex-1">
           <h2 class="text-3xl font-pixelify-bold mb-6 text-blue-900 text-center">
             Semana Acadêmica de SI - UFAC
@@ -108,46 +546,21 @@
             Fique ligado e não deixe de participar desse marco histórico para a nossa comunidade acadêmica!
           </p>
           <p class="text-delft-blue mt-4 font-bold text-center">
-            Data: 03 e 04 de dezembro (08:00)<br />
+            Data: 03 e 04 de dezembro (08:00)<br>
             Local: Universidade Federal do Acre (UFAC) - Anfiteatro Garibaldi
             Brasil
           </p>
           <p class="mt-4 text-center">
             Quer participar?
-            <a
-              href="https://www.even3.com.br/sasiufac/"
-              target="_blank"
-              class="text-delft-blue font-bold uppercase hover:text-blue-800 hover:underline font-pixelify" 
-              rel="noopener noreferrer"
-              >Clique aqui!</a
-            >
+            <a href="https://www.even3.com.br/sasiufac/" target="_blank" class="text-delft-blue font-bold uppercase hover:text-blue-800 hover:underline font-pixelify" rel="noopener noreferrer">Clique aqui!</a>
 
             
-            <p class="text-center my-8">
-              Acompanhe nossas redes (<a
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-delft-blue  hover:underline font-bold"
-              href="https://www.even3.com.br/sasiufac/"
-              >Even3</a
-            >,
-            <a
-              class="text-delft-blue  hover:underline font-bold"
-              target="_blank"
-              rel="nootext-delft-blue  hover:underline"
-              href="https://www.instagram.com/sasiufac/"
-              >Instagram</a
-            >
+            </p><p class="text-center my-8">
+              Acompanhe nossas redes (<a target="_blank" rel="noopener noreferrer" class="text-delft-blue  hover:underline font-bold" href="https://www.even3.com.br/sasiufac/">Even3</a>,
+            <a class="text-delft-blue  hover:underline font-bold" target="_blank" rel="nootext-delft-blue  hover:underline" href="https://www.instagram.com/sasiufac/">Instagram</a>
             e
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-delft-blue  hover:underline font-bold"
-              href="
-            https://chat.whatsapp.com/DQmOgUoLl0b6FByCKCgrj2 "
-            >
-              canal de avisos no WhatsApp</a
-            >) para mais informações!
+            <a target="_blank" rel="noopener noreferrer" class="text-delft-blue  hover:underline font-bold" href="https://chat.whatsapp.com/DQmOgUoLl0b6FByCKCgrj2">
+              canal de avisos no WhatsApp</a>) para mais informações!
             </p>
         </div>
 
@@ -155,7 +568,7 @@
       </section>
 
 
-      <section id="minicards" class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto section-hidden flex flex-col gap-8">
+      <section id="minicards" class="bg-white p-6 rounded-lg mb-8 animate-slide-down w-11/12 md:w-2/3 mx-auto flex flex-col gap-8 section-visible">
         <div class="flex-1">
           <h2 class="text-3xl font-pixelify-bold mb-6 text-blue-900 text-center">Muito conhecimento</h2>
           <p class="text-delft-blue">
@@ -188,12 +601,7 @@
       
             <!-- palestra 1 -->
             <div class="flex flex-col md:flex-row items-start gap-6 bg-gray-100 p-6 rounded-lg ">
-              <img
-                src="public/pax/edilson.webp"
-                alt="Edilson Albertini da Silva"
-                class="rounded-full max-w-[40%] h-auto shadow-lg"
-                loading="lazy"
-              />
+              <img src="./kaua_files/edilson.webp" alt="Edilson Albertini da Silva" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
               <div class="flex-1">
                 <h4 class="font-semibold text-delft-blue text-xl mb-2">08:10 - 09:40 | Palestra 1: O processo de dogfooding na Motorola</h4>
                 <p class="text-gray-700">
@@ -204,12 +612,7 @@
       
             <!-- exposição WebAcademy -->
             <div class="flex flex-col md:flex-row items-start gap-6 bg-gray-100 p-6 rounded-lg ">
-              <img
-                src="public/pax/daricelio.webp"
-                alt="Prof. Dr. Daricelio Moreira Soares"
-                class="rounded-full max-w-[40%] h-auto shadow-lg"
-                loading="lazy"
-              />
+              <img src="./kaua_files/daricelio.webp" alt="Prof. Dr. Daricelio Moreira Soares" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
               <div class="flex-1">
                 <h4 class="font-semibold text-delft-blue text-xl mb-2">10:00 - 11:30 | Exposição: Projetos Desenvolvidos no “Projeto WebAcademy”</h4>
                 <p class="text-gray-700">
@@ -225,12 +628,7 @@
       
             <!-- palestra 2 -->
             <div class="flex flex-col md:flex-row items-start gap-6 bg-gray-100 p-6 rounded-lg">
-              <img
-                src="public/pax/awdren.webp"
-                alt="Prof. Dr. Awdren de Lima Fontão"
-                class="rounded-full max-w-[40%] h-auto shadow-lg"
-                loading="lazy"
-              />
+              <img src="./kaua_files/awdren.webp" alt="Prof. Dr. Awdren de Lima Fontão" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
               <div class="flex-1">
                 <h4 class="font-semibold text-delft-blue text-xl mb-2">08:10 - 09:40 | Palestra 2: Engenharia de Software para Inteligência Artificial</h4>
                 <p class="text-gray-700">
@@ -243,10 +641,6 @@
             <div class="bg-gray-100 p-6 rounded-lg ">
               <h4 class="font-semibold text-delft-blue text-xl mb-2">10:00 - 11:30 | Mesa Redonda: Integração entre Academia e Startups</h4>
               <div class="text-gray-700 space-y-4">
-
-                <strong>Moderador:</strong>
-                <p><strong>Kauã Galvão de Macedo</strong> CEO da Amazonano Forest, .</p>
-
                 <strong>Palestrantes:</strong>
                 <p><strong>Prof. Ms. Vander Magalhães Nicácio:</strong> Consultor de inovação e líder comunitário no Aquiri Valley.</p>
                 <p><strong>Prof. Ms. Victor Antunes Vieira:</strong> Doutorando na UFF, cofundador de startups e especialista em Realidade Estendida e Design Thinking.</p>
@@ -254,30 +648,9 @@
               </div>
       
               <div class="flex flex-wrap gap-6 justify-center mt-6">
-                <img
-                  src="public/pax/kaua.webp"
-                  alt="Mesa Redonda"
-                  class="rounded-full max-w-[30%] h-auto shadow-lg"
-                  loading="lazy"
-                />
-                <img
-                  src="public/pax/vander.webp"
-                  alt="Mesa Redonda"
-                  class="rounded-full max-w-[30%] h-auto shadow-lg"
-                  loading="lazy"
-                />
-                <img
-                  src="public/pax/victor.webp"
-                  alt="Mesa Redonda"
-                  class="rounded-full max-w-[30%] h-auto shadow-lg"
-                  loading="lazy"
-                />
-                <img
-                  src="public/pax/jorge.webp"
-                  alt="Mesa Redonda"
-                  class="rounded-full max-w-[30%] h-auto shadow-lg"
-                  loading="lazy"
-                />
+                <img src="./kaua_files/vander.webp" alt="Mesa Redonda" class="rounded-full max-w-[30%] h-auto shadow-lg" loading="lazy">
+                <img src="./kaua_files/victor.webp" alt="Mesa Redonda" class="rounded-full max-w-[30%] h-auto shadow-lg" loading="lazy">
+                <img src="./kaua_files/jorge.webp" alt="Mesa Redonda" class="rounded-full max-w-[30%] h-auto shadow-lg" loading="lazy">
               </div>
             </div>
           </section>
@@ -306,12 +679,7 @@
                   </span>
               </button>
                   <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                  <img
-                    src="public/pax/luan.webp"
-                    alt="Luan Reis de Lima"
-                    class="rounded-full max-w-[40%] h-auto shadow-lg"
-                    loading="lazy"
-                  />
+                  <img src="./kaua_files/luan.webp" alt="Luan Reis de Lima" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                   <div class="flex flex-col gap-5">
                     <p class="text-gray-700">Possui graduação em Sistemas de Informação pela Universidade Federal do Acre(2021).
                     </p>
@@ -332,12 +700,7 @@
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                <img
-                  src="public/pax/italo.webp"
-                  alt="Italo Oliveira"
-                  class="rounded-full max-w-[40%] h-auto shadow-lg"
-                  loading="lazy"
-                />
+                <img src="./kaua_files/italo.webp" alt="Italo Oliveira" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                 <div class="flex flex-col gap-5">
                   <p class="text-gray-700">Apaixonado por tecnologia, aprendizado de máquina, conhecimento e programação. Estou sempre aprendendo, buscando novidades e me desenvolvendo. Estudo Sistemas de Informação na Universidade Federal do Acre e trabalho como Desenvolvedor Web utilizando tecnologias como Django, Elixir, React, Postgres e Lumen PHP.
                   </p>
@@ -358,12 +721,7 @@
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                <img
-                  src="public/pax/querem.webp"
-                  alt="Queren-Hapuque Lopes Santana de Queiroz"
-                  class="rounded-full max-w-[40%] h-auto shadow-lg"
-                  loading="lazy"
-                />
+                <img src="./kaua_files/querem.webp" alt="Queren-Hapuque Lopes Santana de Queiroz" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                 <div class="flex flex-col gap-5">
                   <p class="text-gray-700">Formada em Tecnologia da Informação e Gestão de Recursos Humanos, com experiência em segurança do trabalho, gestão administrativa e atendimento ao cliente. Atuou em empresas como Bureau Veritas, Energisa e UFAC, focando em gestão de segurança, contratos e equipes. Pós-graduada em Docência no Ensino Superior e cursando Governança Pública.
                   </p>
@@ -386,12 +744,7 @@
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                <img
-                  src="public/pax/dayan.webp"
-                  alt="Dayan Freitas Alves "
-                  class="rounded-full max-w-[40%] h-auto shadow-lg"
-                  loading="lazy"
-                />
+                <img src="./kaua_files/dayan.webp" alt="Dayan Freitas Alves " class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                 <div class="flex flex-col gap-5">
                   <p class="text-gray-700">Estudante de Sistemas de Informação pela Universidade Federal do Acre, com habilidades em programação, análise de dados e gerenciamento de projetos. Participa ativamente de projetos em equipe e está em constante estudo de novas tecnologias para aprimorar suas competências. Busca oportunidades de estágio para adquirir experiência prática, atuar como desenvolvedor full-stack e colaborar com equipes multidisciplinares. Tem como meta se tornar especialista em banco de dados e inteligência artificial, contribuindo para o sucesso dos projetos de empresas de tecnologia.
                   </p>
@@ -417,12 +770,7 @@
                   </span>
               </button>
                   <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                  <img
-                    src="public/pax/luan.webp"
-                    alt="Luan Reis de Lima"
-                    class="rounded-full max-w-[40%] h-auto shadow-lg"
-                    loading="lazy"
-                  />
+                  <img src="./kaua_files/luan.webp" alt="Luan Reis de Lima" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                   <div class="flex flex-col gap-5">
                     <p class="text-gray-700">Possui graduação em Sistemas de Informação pela Universidade Federal do Acre(2021).
                     </p>
@@ -444,12 +792,7 @@
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                <img
-                  src="public/pax/awdren.webp"
-                  alt="Prof. Dr. Awdren de Lima Fontão"
-                  class="rounded-full max-w-[40%] h-auto shadow-lg"
-                  loading="lazy"
-                />
+                <img src="./kaua_files/awdren.webp" alt="Prof. Dr. Awdren de Lima Fontão" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                 <div class="flex flex-col gap-5">
                   <p class="text-gray-700">Professor Adjunto da Faculdade de Computação (FACOM) e membro permanente do Programa de Pós-Graduação em Ciência da Computação (PPGCC) da Universidade Federal de Mato Grosso do Sul (UFMS). Doutor e Mestre pela UFAM, com bacharelado em Ciência da Computação pela mesma instituição. Premiado nacionalmente por sua tese e dissertação em Engenharia de Software e Qualidade de Software.
                   </p>
@@ -457,9 +800,9 @@
                     Com ampla experiência em Developer Relations (DevRel), atuou por seis anos como evangelista de desenvolvedores na Nokia e Microsoft, organizando hackathons, conferências, treinamentos e liderando equipes técnicas.
                     
                   </p>
-                  </p>
+                  <p></p>
                   Pesquisador em Engenharia de Software, com foco em DevRel, Ecossistemas de Software, Mineração de Repositórios de Software, Machine Learning e Engenharia de Software Experimental. Revisor de periódicos e membro de comitês técnicos de eventos acadêmicos. Integra grupos de pesquisa e coordena o Laboratório de Engenharia de Software da FACOM/UFMS.
-                  </p>
+                  <p></p>
                   <p class="text-sm text-gray-500">Horário: <strong> 14:00 - 18:00 </strong>(04/12/2024)</p>
                   <p class="text-sm text-gray-500">Local: <strong> Laboratório 2 do Nave Tech</strong></p>
                 </div>
@@ -477,12 +820,7 @@
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                  <img
-                    src="public/pax/italo.webp"
-                    alt="Italo Oliveira"
-                    class="rounded-full max-w-[40%] h-auto shadow-lg"
-                    loading="lazy"
-                  />
+                  <img src="./kaua_files/italo.webp" alt="Italo Oliveira" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                   <div class="flex flex-col gap-5">
                     <p class="text-gray-700">Apaixonado por tecnologia, aprendizado de máquina, conhecimento e programação. Estou sempre aprendendo, buscando novidades e me desenvolvendo. Estudo Sistemas de Informação na Universidade Federal do Acre e trabalho como Desenvolvedor Web utilizando tecnologias como Django, Elixir, React, Postgres e Lumen PHP.
                     </p>
@@ -505,12 +843,7 @@
                 </span>
               </button>
                 <div class="minicurso-content hidden p-4 bg-gray-100 border border-gray-300 rounded mt-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out flex flex-col md:flex-row items-start gap-6 ">
-                <img
-                  src="public/pax/santiago.webp"
-                  alt="Santiago Rocha de Melo"
-                  class="rounded-full max-w-[40%] h-auto shadow-lg"
-                  loading="lazy"
-                />
+                <img src="./kaua_files/santiago.webp" alt="Santiago Rocha de Melo" class="rounded-full max-w-[40%] h-auto shadow-lg" loading="lazy">
                 <div class="flex flex-col gap-5">
                   <p class="text-gray-700">Estudante de Sistemas de Informação e Cybersegurança | Programador PHP, Python, Java e Web | Entusiasta de IA e Segurança da Informação | Apreciador de Linux e novas tecnologias de desenvolvimento. Apaixonado por tecnologia, programação e segurança digital.
                   </p>
@@ -546,6 +879,24 @@
                 `);
               });
             </script>
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://www.ufac.br/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/ufac_branco.svg" alt="Universidade Federal do Acre" class="w-full h-auto">
+                  </div> </a>
+                  <span>Universidade Federal do Acre</span></div>
+                
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://www.motorola.com.br/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/motorola_white.svg" alt="Motorola" class="w-full h-auto">
+                  </div> </a>
+                  <span>Motorola</span></div>
+                
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://www.ufac.br/site/ufac/proex" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/proex.png" alt="Pró-Reitoria de Extensão e Cultura" class="w-full h-auto">
+                  </div> </a>
+                  <span>Pró-Reitoria de Extensão e Cultura</span></div>
+                
           </div>
         </div>
 <!--  piticas, cidTec, sem fronteiras, rocketseat e algorithms school -->
@@ -572,6 +923,36 @@
                 `);
               });
             </script>
+                <div class="flex flex-col justify-center items-center">  
+                <a href="http://semfronteiras.net.br/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/sem_fronteiras.png" alt="Sem Fronteiras Ultra-Fibra" class="w-full h-auto">
+                  </div> </a>
+                  <span>Sem Fronteiras Ultra-Fibra</span></div>
+                
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://www.instagram.com/algorithmsschool/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/algschool.png" alt="Algorithms School" class="w-full h-auto">
+                  </div> </a>
+                  <span>Algorithms School</span></div>
+                
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://rocketseat.com.br/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/rocketseat.svg" alt="Rocketseat" class="w-full h-auto">
+                  </div> </a>
+                  <span>Rocketseat</span></div>
+                
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://www.instagram.com/piticasacre/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/piticas.png" alt="Piticas" class="w-full h-auto">
+                  </div> </a>
+                  <span>Piticas</span></div>
+                
+                <div class="flex flex-col justify-center items-center">  
+                <a href="https://www.instagram.com/cidtecinformatica/" target="_blank" rel="noopener noreferrer"> <div class="bg-gray-800 p-4 rounded-lg w-64 h-64 flex justify-center items-center">
+                      <img src="./kaua_files/cidtec.png" alt="CIDTEC" class="w-full h-auto">
+                  </div> </a>
+                  <span>CIDTEC</span></div>
+                
           </div>
         </div>
 
@@ -579,41 +960,19 @@
       
 
       <footer class="bg-blue-900 text-white p-4 text-center">
-        <div
-          class="bg-blue-900 py-8 section-hidden flex flex-col gap-8 justify-center w-full rounded-sm"
-        >
-          <div
-            class="justify-center items-center gap-12 flex flex-col md:flex-col"
-          >
+        <div class="bg-blue-900 py-8 section-hidden flex flex-col gap-8 justify-center w-full rounded-sm">
+          <div class="justify-center items-center gap-12 flex flex-col md:flex-col">
             <!-- organização -->
             <div class="my-2">
                 <p class="text-lg font-semibold">ORGANIZAÇÃO</p>
-              <div
-                class="text-lg text-gray-300"
-              >
+              <div class="text-lg text-gray-300">
                 <p>
-                  <a
-                    href="https://www.ufac.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-blue-200 hover:underline"
-                    >Universidade Federal do Acre</a
-                  >
+                  <a href="https://www.ufac.br/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Universidade Federal do Acre</a>
                 </p>
                 <p>
-                  <a
-                    href="http://csi.ufac.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-blue-200 hover:underline"
-                    >Curso de Sistemas de Informação</a
-                  >
+                  <a href="http://csi.ufac.br/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Curso de Sistemas de Informação</a>
                 </p>
-                <p><a 
-                  href="http://www2.ufac.br/ppgcc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-blue-200 hover:underline">Programa de Pós-Graduação em Ciencia da Computação</a></p>
+                <p><a href="http://www2.ufac.br/ppgcc" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Programa de Pós-Graduação em Ciencia da Computação</a></p>
               </div>
             </div>
 
@@ -622,22 +981,10 @@
               <p class="text-lg font-semibold my-2">DESENVOLVIDO POR</p>
               <div class="text-lg text-gray-300">
                 <p>
-                  <a
-                  href="https://sasiufac.github.io/SASI2024/pages/equipe.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-blue-200 hover:underline"
-                  >Equipe organizadora da Semana Acadêmica</a
-                >
+                  <a href="https://sasiufac.github.io/SASI2024/pages/equipe.html" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Equipe organizadora da Semana Acadêmica</a>
               </p>
                 <p>
-                  <a
-                    href="https://www.linkedin.com/in/crcoelhos/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-blue-200 hover:underline"
-                    >Christopher Saar</a
-                  >
+                  <a href="https://www.linkedin.com/in/crcoelhos/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:underline">Christopher Saar</a>
                 </p>
               </div>
             </div>
@@ -646,74 +993,35 @@
             <div class="my-2 text-lg">
               <p class="text-lg font-semibold">ATIVIDADES</p>
               <p>
-                <a
-                  href="https://www.even3.com.br/sasiufac/"
-                  class="text-blue-300 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-blue-200 hover:underline"
-                  >Evento principal</a
-                >
+                <a href="https://www.even3.com.br/sasiufac/" class="text-blue-300 hover:underline" target="_blank" rel="noopener noreferrer">Evento principal</a>
               </p>
               <p>
-                <a
-                  href="https://sasiufac.github.io/SASI2024/pages/maratona.html"
-                  class="text-blue-300 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-blue-200 hover:underline"
-                  >Maratona de Programação</a
-                >
+                <a href="https://sasiufac.github.io/SASI2024/pages/maratona.html" class="text-blue-300 hover:underline" target="_blank" rel="noopener noreferrer">Maratona de Programação</a>
               </p>
               <p>
-                <a
-                  href="https://www.instagram.com/sasiufac/"
-                  class="text-blue-300 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-blue-200 hover:underline"
-                  >Achou um código? nos contate!</a
-                >
+                <a href="https://www.instagram.com/sasiufac/" class="text-blue-300 hover:underline" target="_blank" rel="noopener noreferrer">Achou um código? nos contate!</a>
               </p>
             </div>
           </div>
         </div>
       </footer>
-    <a href="#top" id="scrollToTop" class="fixed bottom-5 right-5 bg-blue-900 text-white p-5 rounded-full hover:bg-blue-700 transition duration-300 z-50">
+    <a href="https://sasiufac.github.io/SASI2024/#top" id="scrollToTop" class="fixed bottom-5 right-5 bg-blue-900 text-white p-5 rounded-full hover:bg-blue-700 transition duration-300 z-50">
       ↑
     </a>
   </main>
     
-    <script src="indexScript.js" defer></script>
+    <script src="./kaua_files/indexScript.js.download" defer=""></script>
 
     
-    <script src="src/alternativeBackground/script.js" defer></script>
+    <script src="./kaua_files/script.js.download" defer=""></script>
 
 
-    <script type="application/ld+json" defer>
-      {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": "Semana Acadêmica de Sistemas de Informação - UFAC",
-        "startDate": "2024-12-03",
-        "endDate": "2024-12-04",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "Universidade Federal do Acre - Anfiteatro Garibaldi Brasil",
-          "address": "Rio Branco, Acre, Brasil"
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "UFAC"
-        },
-        "description": "Participe da 1ª Semana Acadêmica de Sistemas de Informação da UFAC com palestras, minicursos e mais!"
-      }
-    </script>
+
 
  
 
-  </body>
-</html>
+  
 
 
+
+<div style="width: 20px; height: 20px; border: 3px solid white; background: black; border-radius: 50%; position: absolute; z-index: 1000; transition: 0.5s; cursor: grab; left: 375.661px; top: 3551.8px;"></div></body></html>
