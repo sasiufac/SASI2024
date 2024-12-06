@@ -240,7 +240,8 @@ function startBreakoutGame() {
     if (blocksRemaining === 0) {
       setTimeout(() => {
         alert(
-          "PARABÉNS! VOCÊ VENCEU O JOGO! CÓDIGO COMPROBATÓRIO: " + encodedCode
+          "PARABÉNS! VOCÊ VENCEU O JOGO, QUE ERA BEM FACIL, MAS FEZ ISSO DEPOIS QUE A SASI ACABOU...\n 🦆 qwen "
+          // "PARABÉNS! VOCÊ VENCEU O JOGO! CÓDIGO COMPROBATÓRIO: " + encodedCode
         );
         closeButton.click();
       }, 200);
@@ -314,17 +315,23 @@ function encodeCode() {
 }
 
 // decode, so pra testar mesmo
-function decodeCode(encoded) {
-  try {
-    const decoded = atob(encoded); // decode com base64
-    const [decodedString, timestamp] = decoded.split("|");
+// function decodeCode(encoded) {
+//   try {
+//     const decoded = atob(encoded); // decode com base64
+//     const [decodedString, timestamp] = decoded.split("|");
 
-    if (decodedString === "SASI-2024") {
-      return "SASI-2024";
-    } else {
-      return "Código inválido.";
-    }
-  } catch (error) {
-    return "Erro ao decodificar.";
-  }
-}
+//     if (decodedString === "SASI-2024") {
+//       return "SASI-2024";
+//     } else {
+//       return "Código inválido.";
+//     }
+//   } catch (error) {
+//     return "Erro ao decodificar.";
+//   }
+// }
+
+// const test = encodeCode();
+// console.log(test);
+
+// const uncode = decodeCode();
+// console.log(uncode);
